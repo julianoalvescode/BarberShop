@@ -29,18 +29,23 @@ export const Content = styled.div`
             border: none;
             background: none;
             color: ${colors.white};
-        }
-
-        .form__row {
             background-color: ${colors.light_black};
             padding: 17px 22px;
             border-radius: 4px;
-            display: flex;
+        }
+
+        .form__row {
+            display: grid;
             align-items: center;
+
+            span {
+                color: ${colors.red};
+                margin-top: 8px;
+            }
         }
 
         .form__icon {
-            margin-right: 15px;
+            background-color: ${colors.light_black};
         }
 
         button {
