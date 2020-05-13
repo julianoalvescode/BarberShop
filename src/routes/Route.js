@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import AuthLayout from '../pages/layouts/auth';
-import DefaultLayout from '../pages/layouts/default';
+import AuthLayout from '~/pages/layouts/auth';
+import DefaultLayout from '~/pages/layouts/default';
 
 export default function RouterWrapper({
     component: Component,

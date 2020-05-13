@@ -11,10 +11,10 @@ import GlobalStyle from './styles/generic';
 function App() {
     return (
         <>
-          <GlobalStyle />
-          <Router history={history}>
+            <GlobalStyle />
+            <Router history={history}>
                 <Routes />
-           </Router>
+            </Router>
         </>
     );
 }
