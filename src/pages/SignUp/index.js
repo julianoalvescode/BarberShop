@@ -51,8 +51,8 @@ const SignUp = () => {
                         />
                     </div>
                 </div>
-                <button type="submit">Login</button>
-                <Link to="/register">New user? Register now</Link>
+                <button type="submit">Register</button>
+                <Link to="/">Login</Link>
             </form>
         </>
     );
