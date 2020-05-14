@@ -5,12 +5,14 @@ import PropTypes from 'prop-types';
 import AuthLayout from '~/pages/layouts/auth';
 import DefaultLayout from '~/pages/layouts/default';
 
+import store from '~/store';
+
 export default function RouterWrapper({
     component: Component,
     isPrivate,
     ...rest
 }) {
-    const signed = false;
+    const { signed } = store.getState().auth;
 
     if (!signed && isPrivate) {
         return <Redirect to="/" />;
