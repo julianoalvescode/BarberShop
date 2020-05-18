@@ -3,8 +3,10 @@ import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
+import { PersistGate } from 'redux-persist/integration/react';
+
 import './config/ReactotronConfig';
-import store from './store';
+import { store, persistor } from './store';
 
 import Routes from './routes/routes';
 import history from './services/history';
@@ -23,9 +25,11 @@ function App() {
                 />
             </Helmet>
             <Provider store={store}>
-                <Router history={history}>
-                    <Routes />
-                </Router>
+                <PersistGate persistor={persistor}>
+                    <Router history={history}>
+                        <Routes />
+                    </Router>
+                </PersistGate>
             </Provider>
         </>
     );
