@@ -97,7 +97,7 @@ export const SignIn = () => {
                     />
                 </div>
                 <button type="submit">Login</button>
-                <Link to="/">Register</Link>
+                <Link to="/register">Register</Link>
             </Form>
         </>
     );
