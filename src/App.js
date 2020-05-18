@@ -1,4 +1,5 @@
 import React from 'react';
+import { ToastContainer } from 'react-toastify';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -16,7 +17,6 @@ import GlobalStyle from './styles/generic';
 function App() {
     return (
         <>
-            <GlobalStyle />
             <Helmet>
                 <title>Barber Shop</title>
                 <link
@@ -28,6 +28,8 @@ function App() {
                 <PersistGate persistor={persistor}>
                     <Router history={history}>
                         <Routes />
+                        <GlobalStyle />
+                        <ToastContainer autoClose="3000" />
                     </Router>
                 </PersistGate>
             </Provider>
