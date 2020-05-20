@@ -1,68 +1,161 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p  align="center">
+<img  src="https://media1.giphy.com/media/zjdWIkMmV9lK/giphy.gif?cid=ecf05e47bbb850ef5ce18b5c5252e7fe10ee5bf80e590f7d&rid=giphy.gif"  width="400" alt="Barbershop">
+</p>
 
-In the project directory, you can run:
 
-### `yarn start`
+<h1 align="center">Barbershop</h1>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `yarn test`
+<p  align="center">
+<a  href="">
+<img  src="https://img.shields.io/github/repo-size/julianoalvescode/Barber" />
+</a>
+<img  src="https://img.shields.io/badge/author-Juliano%20Alves-red" />
+</a>
+<a  href="">
+<img  src="https://img.shields.io/github/stars/julianoalvescode/Barber" />
+</a>
+<a  href="">
+<img  src="https://img.shields.io/github/license/julianoalvescode/Barber" />
+</a>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</p>
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> A SPA for barbershop, where you can schedule times.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# :pushpin: Roadmap
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+* [Features](#rocket-features)
 
-### Analyzing the Bundle Size
+* [Installation](#construction_worker-installation)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+* [Getting Started](#runner-getting-started)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+* [Found a bug? Missing a specific feature?](#bug-issues)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+* [Contributing](#tada-contributing)
 
-### Deployment
+* [License](#closed_book-license)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+# :rocket: Features
+
+
+
+ * 🍕 Create an account to schedule times in barbershop.
+
+ * 📨 You can browse the dashboard and have access to the available and scheduled times and their appropriate customers. .
+
+ * 🌏 You can modify your profile information.
+
+## Technologies
+
+ * ⚛ **ReactJS** - A library to build user interfaces
+ *  🕸 **Redux with Redux Saga** - State management with middleware
+ * 💅 **Styled-components** - Css in Js
+ * 🤖 **Reactotron** - Helps debugging process
+ * 🤓 **Cypress**-  end-to-end Testing
+ * 🛩 **react-router-dom** - Lib for routes
+ * 💆 **Lint** - ESlint/Prettier/Editor Config
+
+
+
+
+
+# :construction_worker: Installation
+
+
+
+**You need to install [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) first, then in order to clone the project via HTTPS, run this command:**
+
+
+
+```git clone https://github.com/julianoalvescode/Barber.git```
+
+
+
+SSH URLs provide access to a Git repository via SSH, a secure protocol. If you use a SSH key registered in your Github account, clone the project using this command:
+
+
+
+```git clone git@github.com:julianoalvescode/Barber.git```
+
+
+
+**Install dependencies**
+
+
+
+```yarn install```
+
+
+
+
+
+
+
+# :runner: Getting Started
+
+
+
+
+
+Run the following command in order to start the application in a development environment:
+
+
+
+```yarn dev```
+
+  Then in your browser enter
+
+    http://localhost:3000
+
+## Tests
+To run the Cypress tests, simply run the command in the terminal
+
+    yarn  test:e2e"
+
+But if you want to run the unit tests, just run the command down in the terminal
+
+    yarn test
+
+# :bug: Issues
+
+
+
+Feel free to **file a new issue** with a respective title and description on the the [Barbershop](https://github.com/julianoalvescode/Barber) repository. If you already found a solution to your problem, **Don't miss out too and come help :)**!
+
+
+
+
+
+
+# :closed_book: License
+
+
+
+Released in 2020.
+
+This project is under the [MIT license](https://github.com/LauraBeatris/Barber/master/LICENSE).
+
+
+
+Made with love by [Juliano Alves](https://github.com/julianoalvescode) 💜🚀
