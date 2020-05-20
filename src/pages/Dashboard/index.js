@@ -13,6 +13,7 @@ import {
 } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
 import en from 'date-fns/locale/en-US';
+import { Helmet } from 'react-helmet';
 import { Container, Time } from './styles';
 import api from '~/services/api';
 
@@ -66,49 +67,54 @@ export default function Dashboard() {
     }
 
     return (
-        <Container>
-            <header>
-                <button type="button" onClick={handlePrevDay}>
-                    <MdChevronLeft size={36} color="#fff" />
-                </button>
-                <strong>{dateFormatted}</strong>
-                <button type="button" onClick={handleNextDay}>
-                    <MdChevronRight size={36} color="#fff" />
-                </button>
-            </header>
+        <>
+            <Helmet>
+                <title>Barbershop - Dashboard</title>
+            </Helmet>
+            <Container>
+                <header>
+                    <button type="button" onClick={handlePrevDay}>
+                        <MdChevronLeft size={36} color="#fff" />
+                    </button>
+                    <strong>{dateFormatted}</strong>
+                    <button type="button" onClick={handleNextDay}>
+                        <MdChevronRight size={36} color="#fff" />
+                    </button>
+                </header>
 
-            <ul>
-                {schedule.map((time) => (
-                    <Time
-                        key={time.time}
-                        past={time.past}
-                        available={!time.appointment}
-                    >
-                        <strong>{time.time}</strong>
-                        <span>
-                            {time.appointment
-                                ? time.appointment.user.name
-                                : 'Open'}
-                        </span>
+                <ul>
+                    {schedule.map((time) => (
+                        <Time
+                            key={time.time}
+                            past={time.past}
+                            available={!time.appointment}
+                        >
+                            <strong>{time.time}</strong>
+                            <span>
+                                {time.appointment
+                                    ? time.appointment.user.name
+                                    : 'Open'}
+                            </span>
+                        </Time>
+                    ))}
+                    <Time>
+                        <strong>9:00h</strong>
+                        <span>Juliano Alves</span>
                     </Time>
-                ))}
-                <Time>
-                    <strong>9:00h</strong>
-                    <span>Juliano Alves</span>
-                </Time>
-                <Time>
-                    <strong>12:00h</strong>
-                    <span>Juliano Alves</span>
-                </Time>
-                <Time>
-                    <strong>14:00h</strong>
-                    <span>Juliano Alves</span>
-                </Time>
-                <Time>
-                    <strong>16:00h</strong>
-                    <span>Juliano Alves</span>
-                </Time>
-            </ul>
-        </Container>
+                    <Time>
+                        <strong>12:00h</strong>
+                        <span>Juliano Alves</span>
+                    </Time>
+                    <Time>
+                        <strong>14:00h</strong>
+                        <span>Juliano Alves</span>
+                    </Time>
+                    <Time>
+                        <strong>16:00h</strong>
+                        <span>Juliano Alves</span>
+                    </Time>
+                </ul>
+            </Container>
+        </>
     );
 }
