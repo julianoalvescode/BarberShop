@@ -15,3 +15,13 @@ export const ButtonPrimary = css`
         background-color: ${darken(0.03, colors.primary)};
     }
 `;
+
+export const Input = css`
+    width: 100%;
+    border: none;
+    background: none;
+    color: ${colors.white};
+    background-color: ${colors.light_black};
+    padding: 17px 22px;
+    border-radius: 4px;
+`;

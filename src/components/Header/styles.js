@@ -2,9 +2,8 @@ import styled from 'styled-components';
 import { colors } from '~/styles/settings';
 
 export const Container = styled.div`
-    height: 64px;
+    background: ${colors.light_black};
     padding: 0 30px;
-    background-color: ${colors.black};
 `;
 
 export const Content = styled.div`
@@ -19,15 +18,17 @@ export const Content = styled.div`
         display: flex;
         align-items: center;
 
-        svg {
+        img {
             margin-right: 20px;
             padding-right: 20px;
             border-right: 1px solid #eee;
         }
-    }
 
-    a {
-        color: ${colors.primary};
+        a {
+            font-weight: bold;
+            color: #7159c1;
+            text-transform: uppercase;
+        }
     }
 
     aside {
@@ -40,7 +41,7 @@ export const Profile = styled.div`
     display: flex;
     margin-left: 20px;
     padding-left: 20px;
-    border-left: 1px solid #eeee;
+    border-left: 1px solid #eee;
 
     div {
         text-align: right;
@@ -48,20 +49,20 @@ export const Profile = styled.div`
 
         strong {
             display: block;
-            color: #fff;
+            color: ${colors.primary};
         }
 
         a {
             display: block;
             margin-top: 2px;
             font-size: 12px;
-            color: #ffff;
+            color: #999;
         }
     }
 
     img {
-        height: 32px;
         width: 32px;
+        height: 32px;
         border-radius: 50%;
     }
 `;

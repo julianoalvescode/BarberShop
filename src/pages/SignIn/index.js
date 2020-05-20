@@ -13,7 +13,7 @@ const schema = Yup.object().shape({
     password: Yup.string().required('Password is required'),
 });
 
-export const SignIn = () => {
+const SignIn = () => {
     const dispatch = useDispatch();
     const loading = useSelector((state) => state.auth.loading);
 

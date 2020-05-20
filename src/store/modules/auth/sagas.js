@@ -1,15 +1,14 @@
-import { all, takeLatest, call, put } from 'redux-saga/effects';
+import { takeLatest, call, put, all } from 'redux-saga/effects';
 import { toast } from 'react-toastify';
-
-import history from '~/services/history';
-import api from '~/services/api';
 import { signInSuccess, signFailure } from './actions';
+import api from '~/services/api';
+import history from '~/services/history';
 
 export function* signIn({ payload }) {
     try {
         const { email, password } = payload;
 
-        const response = yield call(api.post, 'login', {
+        const response = yield call(api.post, '/sessions', {
             email,
             password,
         });
@@ -17,8 +16,7 @@ export function* signIn({ payload }) {
         const { token, user } = response.data;
 
         if (!user.provider) {
-            toast.error('Usuário não é prestador');
-            return;
+            toast.error('User is not provider.');
         }
 
         api.defaults.headers.Authorization = `Bearer ${token}`;
@@ -27,7 +25,7 @@ export function* signIn({ payload }) {
 
         history.push('/dashboard');
     } catch (err) {
-        toast.error('Failure in Authentication, verify your data');
+        toast.error('Incorrect e-mail or password.');
         yield put(signFailure());
     }
 }
@@ -36,7 +34,7 @@ export function* signUp({ payload }) {
     try {
         const { name, email, password } = payload;
 
-        yield call(api.post, 'users', {
+        yield call(api.post, '/users', {
             name,
             email,
             password,
@@ -44,8 +42,8 @@ export function* signUp({ payload }) {
         });
 
         history.push('/');
-    } catch (error) {
-        toast.error('Failure in Register, verify your data');
+    } catch (err) {
+        toast.error('Failure to register. Check your data');
         yield put(signFailure());
     }
 }
@@ -53,15 +51,21 @@ export function* signUp({ payload }) {
 export function setToken({ payload }) {
     if (!payload) return;
 
-    const { token } = payload;
+    const { token } = payload.auth;
 
     if (token) {
         api.defaults.headers.Authorization = `Bearer ${token}`;
     }
 }
 
+export function signOut() {
+    history.push('/');
+    toast.info('You left the application. Please log in to log in again.');
+}
+
 export default all([
     takeLatest('persist/REHYDRATE', setToken),
     takeLatest('@auth/SIGN_IN_REQUEST', signIn),
     takeLatest('@auth/SIGN_UP_REQUEST', signUp),
+    takeLatest('@auth/SIGN_OUT', signOut),
 ]);
