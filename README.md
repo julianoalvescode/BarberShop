@@ -154,7 +154,7 @@ Feel free to **file a new issue** with a respective title and description on the
 
 Released in 2020.
 
-This project is under the [MIT license](https://github.com/LauraBeatris/Barber/master/LICENSE).
+This project is under the [MIT license](https://github.com/JulianoAlves/Barber/master/LICENSE).
 
 
 
