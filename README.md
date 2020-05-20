@@ -49,7 +49,6 @@
 
 * [Found a bug? Missing a specific feature?](#bug-issues)
 
-* [Contributing](#tada-contributing)
 
 * [License](#closed_book-license)
 
